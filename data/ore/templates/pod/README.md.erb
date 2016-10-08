@@ -1,0 +1,47 @@
+#<%= @repo_name %>
+![pods](https://img.shields.io/cocoapods/v/<%= @repo_name %>.svg?style=flat)
+![MIT](https://img.shields.io/cocoapods/v/<%= @repo_name %>.svg?style=flat)
+[![Build Status](https://travis-ci.org/joedaniels29/<%= @repo_name %>.svg?branch=master)](https://travis-ci.org/joedaniels29/<%= @repo_name %>)
+
+
+## Usage
+
+The control itsself is `<%= @nice_name %>`.
+
+
+```swift
+import SampleCode
+```
+
+
+## Contributing
+
+Please do contribute! open an issue if you have a question. Then  Submit a PR!  :D
+
+## Install via CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+> CocoaPods 1.1.0+ is required to build <%= @repo_name %>
+
+To integrate <%= @repo_name %> into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod '<%= @repo_name %>'
+end
+```
+
+
+
+## License
+
+<%= @repo_name %> is released under the MIT license. See LICENSE for details.
