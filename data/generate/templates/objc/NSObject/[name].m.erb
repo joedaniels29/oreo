@@ -1,0 +1,45 @@
+<%= definition(NSObject: :Class) do %>
+@interface <%= @class_name %> ()
+
+@end
+
+
+@implementation <%= @class_name %>:<%= @super_class_name %>
+
+
+
+<%= yield %>
+
+
+<%= overrides :equality do %>
+#pragma mark - Equality
+- (BOOL)isEqualTo<%= @class_name %>:(<%= @class_name %> *)inst {
+    return NO;
+}
+
+- (BOOL)isEqual:(id)object {
+  if (self == object) {
+    return YES;
+  }
+
+  if (![object isKindOfClass:[<%= @class_name %> class]]) {
+    return NO;
+  }
+
+      return [self isEqualTo<%= @class_name %>:(<%= @class_name %> *)object];
+}
+
+- (NSUInteger)hash {
+  return [self.name hash] ^ [self.birthday hash];
+}
+<% end %>
+
+
+<%= overrides :description do %>
+#pragma mark - Description
+
+<% end %>
+
+
+@end
+<% end %>

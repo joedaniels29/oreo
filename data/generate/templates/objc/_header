@@ -1,0 +1,8 @@
+//Remainder of this line (and the next one) intentionally left blank:
+
+// <%= @name %>
+// <%= @project.name %>
+//
+// Created by <%= @author %> on <%= @date %>
+// Copyright (c) <%= @date %> <%= @project.copyright_owner||@author %> All rights reserved.
+<%= yield %>

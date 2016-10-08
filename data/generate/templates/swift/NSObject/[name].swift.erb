@@ -1,0 +1,22 @@
+
+<%= definition(NSObject: :Type) do %>
+@objc(<%= @class_name %>) class <%= @class_name %>:<%= @super_name %>{
+
+
+
+<%= yield %>
+
+
+<%= overrides :equality do %>
+// MARK: - Equality
+    override func isEqual(object: AnyObject?) -> Bool {
+       //if let rhs = object as? EquatableCardObject {
+    //       return rank == rhs.rank
+      // }
+       return false
+   }
+<% end %>
+
+
+}
+<% end %>

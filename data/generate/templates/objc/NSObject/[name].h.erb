@@ -1,0 +1,7 @@
+<%= definition(NSObject: :Class) do %>
+@interface <%= @class_name %>:<%= @super_class_name %>
+
+<%= yield %>
+
+@end
+<% end %>
